@@ -1,0 +1,15 @@
+# Wrangler configuration for Cloudflare Pages project
+
+compatibility_date = "2025-01-02"
+
+# Enable Node.js compatibility
+node_compat = true
+
+name = "typesense-remix-worker"
+
+[build]
+command = "npm run build"
+
+# Environment configurations (optional)
+[env.production]
+workers_dev = false

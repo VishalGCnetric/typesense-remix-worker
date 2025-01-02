@@ -5,6 +5,9 @@ import {
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
+
+
+
 declare module "@remix-run/cloudflare" {
   interface Future {
     v3_singleFetch: true;
@@ -12,6 +15,13 @@ declare module "@remix-run/cloudflare" {
 }
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      crypto: 'crypto-browserify',
+      stream: 'stream-browserify',
+    },
+  },
+
   plugins: [
     remixCloudflareDevProxy(),
     remix({
