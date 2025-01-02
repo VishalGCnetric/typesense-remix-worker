@@ -1,9 +1,10 @@
 # Wrangler configuration for Cloudflare Pages project
 
-compatibility_date = "2025-01-02"
+type = "javascript"
 
-# Enable Node.js compatibility
-node_compat = true
+compatibility_date = "2025-01-02"
+#compatibility_flags = ["nodejs_compat"]
+
 
 name = "typesense-remix-worker"
 
